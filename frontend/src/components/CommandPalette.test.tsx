@@ -161,9 +161,7 @@ describe("CommandPalette", () => {
 
   it("defers to the open/onOpenChange props when used as a controlled component", () => {
     const onOpenChange = vi.fn();
-    const { rerender } = render(
-      <CommandPalette open={false} onOpenChange={onOpenChange} />,
-    );
+    const { rerender } = render(<CommandPalette open={false} onOpenChange={onOpenChange} />);
 
     expect(screen.queryByPlaceholderText("Search navigation...")).not.toBeInTheDocument();
 
